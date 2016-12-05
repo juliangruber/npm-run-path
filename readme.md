@@ -1,14 +1,15 @@
-# npm-run-path [![Build Status](https://travis-ci.org/sindresorhus/npm-run-path.svg?branch=master)](https://travis-ci.org/sindresorhus/npm-run-path)
+# npm-run-path-compat [![Build Status](https://travis-ci.org/sindresorhus/npm-run-path.svg?branch=master)](https://travis-ci.org/sindresorhus/npm-run-path)
 
 > Get your [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) prepended with locally installed binaries
 
 In [npm run scripts](https://docs.npmjs.com/cli/run-script) you can execute locally installed binaries by name. This enables the same outside npm.
 
+__This is a fork with support for older node versions.__
 
 ## Install
 
 ```
-$ npm install --save npm-run-path
+$ npm install --save npm-run-path-compat
 ```
 
 
@@ -16,7 +17,7 @@ $ npm install --save npm-run-path
 
 ```js
 const childProcess = require('child_process');
-const npmRunPath = require('npm-run-path');
+const npmRunPath = require('npm-run-path-compat');
 
 console.log(process.env.PATH);
 //=> '/usr/local/bin'
@@ -79,3 +80,4 @@ Accepts an object of environment variables, like `process.env`, and modifies the
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Julian Gruber](http://juliangruber.com)
